@@ -1,0 +1,25 @@
+<script>
+const streamlitDoc = window.parent.document;
+
+const buttons = Array.from(streamlitDoc.querySelectorAll('.stButton > button'));
+const selectbox = streamlitDoc.querySelector('.stSelectbox > div');
+console.log(buttons); // find buttons in console tab
+console.log(selectbox);
+
+const left_button = buttons.find(el => el.innerText === 'Decrement');
+const right_button = buttons.find(el => el.innerText === 'Increment');
+
+left_button.style.backgroundColor = "coral"
+right_button.style.backgroundColor = "lightblue"
+
+streamlitDoc.addEventListener('keydown', function(e) {
+    console.log(e.key)
+<!--    right_button.click();-->
+    selectbox.children[0].click();
+    //while (streamlitDoc.querySelector('div[data-baseweb="popover"]') == null){
+    //    selectbox.children[0].click();
+    //}
+    const python_string = ''
+    streamlitDoc.querySelector('div[data-testid="stMetricValue"]').textContent = python_string;
+});
+</script>
