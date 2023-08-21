@@ -1,5 +1,6 @@
 folium>=0.14.0
-geopandas>=0.12.2
+fiona==1.8.1
+geopandas
 matplotlib>=3.6.3
 pandas>=1.5.3
 scikit-learn>=1.2.1
